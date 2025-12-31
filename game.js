@@ -7,9 +7,11 @@ var score = 0;
 
 $(document).keydown(function(e) {
     if (!started) {
-        $("#level-title").text("Level " + level);
+        setTimeout(function(){$("#level-title").text("Level " + level);
         nextSequence();
         started = true;
+        },500)
+        
         return;
     }
     
@@ -32,13 +34,14 @@ $(document).keydown(function(e) {
 });
 
 $("#start-btn").click(function(e) {
-    $(".start-button").text("Start Game");
+    if (!started){$(".start-button").text("Start Game");}
     e.preventDefault();
-    if (!started) {
+    if (!started)setTimeout(function(){
+        $(".start-button").text("Game Started");
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
-    }
+    },500)
 });
 $(".btn").click(function() {
     var userChosenColour = $(this).attr("id");
