@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Game</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="page intro-page">
+      <h1>Simon</h1>
+      <h2>Challenge Your Memory</h2>
+
+      <div class="rules-section">
+        <h3>Rules</h3>
+        <ul>
+          <li>Watch the colored sequence</li>
+          <li>Repeat the sequence by clicking colors</li>
+          <li>Sequence gets longer each round</li>
+          <li>Match perfectly to advance levels</li>
+          <li>Miss a color and game ends</li>
+        </ul>
+      </div>
+
+      <div class="controls-section">
+        <h3>Controls</h3>
+        <ul>
+          <li><strong>Mouse:</strong> Click colored buttons</li>
+          <li>
+            <strong>Keyboard:</strong> 1=<span class="green">Green</span>,
+            2=<span class="red">Red</span>, 3=<span class="yellow">Yellow</span>
+            , 4=<span class="blue">Blue</span>
+          </li>
+          <li><strong>Mobile:</strong> Tap colored buttons</li>
+        </ul>
+      </div>
+
+      <div class="scroll-hint">↓ Scroll to Play ↓</div>
+    </section>
+
+    <section class="page game-page">
+      <h1 id="level-title">Press Any Key Or Click Below To Start</h1>
+      <button id="start-btn" class="start-button">START GAME</button>
+
+      <div class="container">
+        <div class="row">
+          <div id="green" class="btn green"></div>
+          <div id="red" class="btn red"></div>
+        </div>
+        <div class="row">
+          <div id="yellow" class="btn yellow"></div>
+          <div id="blue" class="btn blue"></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>Made by Kaamil Hifzaan P S</p>
+      <div class="contact-links">
+        <a href="https://github.com/kaamilhifzaan" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/kaamil-hifzaan-995764373/" target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://x.com/Kaamiliscoding" target="_blank">X</a>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./game.js" charset="utf-8"></script>
+  </body>
+</html>
